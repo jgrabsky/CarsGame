@@ -14,6 +14,7 @@ ACarClass::ACarClass()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	// setup components
 	CarCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Car Capsule"));
 	RootComponent = CarCapsule;
 
@@ -46,5 +47,10 @@ void ACarClass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ACarClass::MoveCar);
 }
 
+void ACarClass::MoveCar(float MoveValue)
+{
+	UE_LOG(LogTemp, Warning, TEXT("MoveCar value: %f"), MoveValue);
+}

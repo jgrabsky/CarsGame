@@ -26,6 +26,9 @@ private:
 	UPROPERTY(EditAnywhere) class USpringArmComponent* SpringArm;
 	UPROPERTY(EditAnywhere) class UCameraComponent* Camera;
 
+	// functions
+	void MoveCar(float MoveValue);
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
