@@ -23,6 +23,8 @@ protected:
 private:
 	UPROPERTY(EditAnywhere)	class UCapsuleComponent* CarCapsule;
 	UPROPERTY(EditAnywhere)	UStaticMeshComponent* CarMesh;
+	UPROPERTY(EditAnywhere) class USpringArmComponent* SpringArm;
+	UPROPERTY(EditAnywhere) class UCameraComponent* Camera;
 
 public:	
 	// Called every frame

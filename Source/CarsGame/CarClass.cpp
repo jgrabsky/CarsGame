@@ -2,7 +2,10 @@
 
 
 #include "CarClass.h"
+
+#include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 
 
 // Sets default values
@@ -16,6 +19,12 @@ ACarClass::ACarClass()
 
 	CarMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Car Mesh"));
 	CarMesh->SetupAttachment(CarCapsule);
+
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Spring Arm"));
+	SpringArm->SetupAttachment(CarCapsule);
+
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	Camera->SetupAttachment(SpringArm);
 }
 
 // Called when the game starts or when spawned
