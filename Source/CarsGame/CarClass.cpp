@@ -13,6 +13,9 @@ ACarClass::ACarClass()
 
 	CarCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Car Capsule"));
 	RootComponent = CarCapsule;
+
+	CarMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Car Mesh"));
+	CarMesh->SetupAttachment(CarCapsule);
 }
 
 // Called when the game starts or when spawned

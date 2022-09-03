@@ -22,6 +22,7 @@ protected:
 
 private:
 	class UCapsuleComponent* CarCapsule;
+	UStaticMeshComponent* CarMesh;
 
 public:	
 	// Called every frame
