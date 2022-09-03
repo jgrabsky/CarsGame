@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "CarClass.generated.h"
 
+
 UCLASS()
 class CARSGAME_API ACarClass : public APawn
 {
@@ -18,6 +19,9 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+private:
+	class UCapsuleComponent* CarCapsule;
 
 public:	
 	// Called every frame

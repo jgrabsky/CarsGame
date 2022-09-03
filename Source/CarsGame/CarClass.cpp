@@ -2,6 +2,8 @@
 
 
 #include "CarClass.h"
+#include "Components/CapsuleComponent.h"
+
 
 // Sets default values
 ACarClass::ACarClass()
