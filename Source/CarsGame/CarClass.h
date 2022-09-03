@@ -21,8 +21,8 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	class UCapsuleComponent* CarCapsule;
-	UStaticMeshComponent* CarMesh;
+	UPROPERTY(EditAnywhere)	class UCapsuleComponent* CarCapsule;
+	UPROPERTY(EditAnywhere)	UStaticMeshComponent* CarMesh;
 
 public:	
 	// Called every frame
